@@ -24,11 +24,6 @@ import java.util.List;
 @RestController
 @RequestMapping(ApiPaths.ApartmentCtrl.CTRL)
 
-@Slf4j
-@CrossOrigin
-@NoArgsConstructor
-@AllArgsConstructor
-
 public class ApartmentController {
     @Autowired
     private ApartmentServiceImpl apartmentServiceImpl;

@@ -57,16 +57,16 @@ public class ApartmentServiceImpl implements ApartmentService {
         if (aptDb == null)
             throw new IllegalArgumentException("Apartments does not exist ID :" + id);
         aptDb.setColor(apartmentDto.getColor());
-        aptDb.setControlDate(aptDb.getControlDate());
-        aptDb.setAptName(aptDb.getAptName());
-        aptDb.setAdress(aptDb.getAdress());
-        aptDb.setRegion(aptDb.getRegion());
-        aptDb.setMail(aptDb.getMail());
-        aptDb.setAdminName(aptDb.getAdminName());
-        aptDb.setNumber(aptDb.getNumber());
-        aptDb.setTax(aptDb.getTax());
-        aptDb.setSozlesme(aptDb.getSozlesme());
-        aptDb.setDescription(aptDb.getDescription());
+        aptDb.setControlDate(apartmentDto.getControlDate());
+        aptDb.setAptName(apartmentDto.getAptName());
+        aptDb.setAdress(apartmentDto.getAdress());
+        aptDb.setRegion(apartmentDto.getRegion());
+        aptDb.setMail(apartmentDto.getMail());
+        aptDb.setAdminName(apartmentDto.getAdminName());
+        aptDb.setNumber(apartmentDto.getNumber());
+        aptDb.setTax(apartmentDto.getTax());
+        aptDb.setSozlesme(apartmentDto.getSozlesme());
+        aptDb.setDescription(apartmentDto.getDescription());
         apartmentRepository.save(aptDb);
         return modelMapper.map(aptDb, ApartmentDto.class);
     }

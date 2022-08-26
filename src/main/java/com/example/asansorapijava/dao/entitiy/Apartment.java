@@ -21,11 +21,12 @@ import java.util.Date;
 @AllArgsConstructor
 
 @Where(clause = "isdeleted='false'")
-@SQLDelete(sql = "UPDATE notes SET isdeleted = true WHERE id = ? and version = ?")
+@SQLDelete(sql = "UPDATE apartments SET isdeleted = true WHERE id = ?")
 
 public class Apartment extends BaseEntity {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     @Column(name = "id", nullable = false)
     private Long id;
 

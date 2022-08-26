@@ -1,8 +1,10 @@
 package com.example.asansorapijava.service;
 
 import com.example.asansorapijava.dto.ApartmentDto;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
+
 
 public interface ApartmentService {
 
