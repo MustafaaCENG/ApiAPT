@@ -78,11 +78,11 @@ public class UserController {
     //@ApiOperation(value = "Update Operation", response = NoteDto.class)
     @Operation(summary = "Update Operation")
     @ApiResponses(value = {
-            @ApiResponse(responseCode = "204",description = "Succesfull Operation",content = @Content(schema = @Schema(implementation = ApartmentDto.class))),
+            @ApiResponse(responseCode = "204", description = "Succesfull Operation", content = @Content(schema = @Schema(implementation = ApartmentDto.class))),
             @ApiResponse(responseCode = "404", description = "Note not found ")})
     public ResponseEntity<Object> updateApartment(@PathVariable(value = "id", required = true) Long id, @Valid @RequestBody UserDto userdto, User user) {
         try {
-            userServiceImpl.update(id, userdto ,user);
+            userServiceImpl.update(id, userdto, user);
             return ResponseEntity.noContent().build();
         } catch (Exception e) {
             return ResponseEntity.notFound().build();
@@ -94,14 +94,14 @@ public class UserController {
     //@ApiOperation(value = "Delete Operation", response = Boolean.class)
     @Operation(summary = "Delete Operation")
     @ApiResponses(value = {
-            @ApiResponse(responseCode = "204",description = "Succesfull Operation",content = @Content(schema = @Schema(implementation = Boolean.class))),
+            @ApiResponse(responseCode = "204", description = "Succesfull Operation", content = @Content(schema = @Schema(implementation = Boolean.class))),
             @ApiResponse(responseCode = "400", description = "Id cannot be null"),
             @ApiResponse(responseCode = "404", description = "An error occured")})
     public ResponseEntity<Void> delete(@PathVariable(value = "id", required = true) Long id, User user) {
         try {
             if (id != null) {
 
-                userServiceImpl.delete(id,user);
+                userServiceImpl.delete(id, user);
                 return ResponseEntity.noContent().build();
             } else {
                 return ResponseEntity.badRequest().build();
