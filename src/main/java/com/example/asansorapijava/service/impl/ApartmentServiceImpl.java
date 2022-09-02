@@ -5,7 +5,6 @@ import com.example.asansorapijava.dao.entitiy.Apartment;
 import com.example.asansorapijava.dto.ApartmentDto;
 import com.example.asansorapijava.service.ApartmentService;
 
-
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

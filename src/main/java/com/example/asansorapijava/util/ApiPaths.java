@@ -5,5 +5,9 @@ public class ApiPaths {
 
     public static final class ApartmentCtrl {
         public static final String CTRL = BASE_PATH + "/apartments";
+
+    }
+    public static final class UserCtrl {
+        public static final String CTRL = BASE_PATH + "/users";
     }
 }

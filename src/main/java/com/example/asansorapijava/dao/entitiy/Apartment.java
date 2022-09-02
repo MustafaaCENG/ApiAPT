@@ -64,6 +64,4 @@ public class Apartment extends BaseEntity {
 
     @Column(name = "Description")
     private String description;
-
-
 }

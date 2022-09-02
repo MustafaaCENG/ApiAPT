@@ -8,7 +8,7 @@ import java.util.List;
 
 public interface ApartmentService {
 
-    ApartmentDto save(ApartmentDto defectDto);
+    ApartmentDto save(ApartmentDto apartmentDto);
 
     ApartmentDto getById(Long id);
 
